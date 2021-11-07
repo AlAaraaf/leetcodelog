@@ -13,6 +13,13 @@ def createListNode(seq):
         node = node.next
     return head
 
+def printListNodes(head: ListNode):
+    res = []
+    while head != None:
+        res.append(head.val)
+        head = head.next
+    print(res)
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
