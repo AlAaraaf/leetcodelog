@@ -43,3 +43,18 @@ def createTreeNodeByLayerSeq(seq:list) -> TreeNode:
         seqIdx = seqIdx + 2
     
     return head
+
+def printTreeByLayerSeq(root: TreeNode):
+    queue = []
+    res = []
+    if root != None:
+        queue.insert(0, root)
+    while queue != []:
+        current_node = queue.pop()
+        res.append(current_node.val)
+        if current_node.left != None:
+            queue.insert(0, current_node.left)
+        if current_node.right != None:
+            queue.insert(0, current_node.right)
+    
+    print(res)
